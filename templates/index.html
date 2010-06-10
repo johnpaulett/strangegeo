@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+    <head>
+        <meta charset="utf-8" />
+        
+        <link rel="stylesheet" href="/static/css/blueprint/screen.css" type="text/css" media="screen, projection">
+        <link rel="stylesheet" href="/static/css/blueprint/print.css" type="text/css" media="print">
+        <!--[if lt IE 8]>
+        <link rel="stylesheet" href="/static/css/blueprint/ie.css" type="text/css" media="screen, projection">
+        <![endif]-->
+
+        <link rel="stylesheet" href="/static/css/strangegeo.css" type="text/css" media="screen, projection">      
+
+        <!-- html5shiv by Remy Sharp from http://diveintohtml5.org/semantics.html#unknown-elements -->
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+    </head>
+    <body>
+        <header>
+            <h1>GeoDjango @ Strange Loop</h1>
+        </header>
+        
+        <div id="container">       
+            <aside id="position">
+                <h2>Current Location</h2>
+                <ul class="coordinate">
+                    <li>Latitude: <span class="coordinate" id="latitude">?</span></li>
+                    <li>Longitude: <span class="coordinate" id="longitude">?</span></li>
+                    <li>Accuracy: <span class="coordinate" id="accuracy">?</span> meters</li>
+                    <li>Altitude: <span class="coordinate" id="altitude">?</span> meters</li>
+                    <li>Altitude Accuracy: <span class="coordinate" id="altitudeAccuracy">?</span> meters</li>
+                    <li>Heading: <span class="coordinate" id="heading">?</span> degrees</li>
+                    <li>Speed: <span class="coordinate" id="speed">?</span> meters/second</li>
+                </ul>  
+                <h2>Time Left</h2>
+                <p>
+                    about 5 minutes 36 seconds
+                </p>
+
+                <section>
+                    <script>
+                        $(document).ready(function(){
+                            new TWTR.Widget(TWITTER_OPTIONS).render().start();
+                        });
+                    </script>
+                </section>
+                
+            </aside>
+            
+
+            <section id="map">
+                <h1>Players' Locations</h1>
+                <div id="errorBox"></div>
+                <div id="mapcanvas" style="width:400px; height:400px"></div>
+            </section>
+            
+            <aside id="leaderboard">
+                
+                <h1>Leaderboard</h1>
+                
+                <h2>Distance</h2>
+                <ol>
+                    <li>@bob: 2M</li>
+                    <li>@ted: 2.3M</li>
+                    <li>@sue: 10M</li>
+                    <li>@june: 24M</li>
+                </ol>
+                <ol>
+                    <li>@bob: 2M</li>
+                    <li>@ted: 2.3M</li>
+                    <li>@sue: 10M</li>
+                    <li>@june: 24M</li>
+                </ol>
+                
+                <h2>Accuracy</h2>
+                <ol>
+                    <li>@bob: 2M</li>
+                    <li>@ted: 2.3M</li>
+                    <li>@sue: 10M</li>
+                    <li>@june: 24M</li>
+                </ol>
+                <ol>
+                    <li>@bob: 2M</li>
+                    <li>@ted: 2.3M</li>
+                    <li>@sue: 10M</li>
+                    <li>@june: 24M</li>
+                </ol>
+            </aside>
+        </div>
+
+        <footer>
+            <section>
+                <p>
+                    strangegeo is a demostration of GeoDjango and HTML5 Geolocation 
+                    by <a href="http://johnpaulett.com">John Paulett</a> 
+                    (<a href="http://twitter.com/johnpaulett">@johnpaulett</a>) for 
+                    StrangeLoop 2010.
+                </p>
+                <p>
+                    The code for this website is available at <a href="http://github.com/johnpaulett/strangegeo">
+                    github.com/johnpaulett/strangegeo</a> under a BSD License.
+                </p>
+            </section>
+            <section>
+                Resources
+                <ul>
+                    <li><a href="http://diveintohtml5.org/geolocation.html">Dive Into HTML 5 Geolocation</a></li>
+                </ul>
+            </section>
+            <p class="copyright">Copyright &copy; 2010 John Paulett</p>
+            
+        </footer>
+    </body>
+<script src="/static/js/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+<script src="/static/js/strangegeo.js" type="text/javascript"></script>
+<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+</html>
