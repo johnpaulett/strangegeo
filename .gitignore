@@ -1,0 +1,7 @@
+*.pyc
+*\~
+distribute*.tar.gz
+pip-log.txt
+env/
+
+
